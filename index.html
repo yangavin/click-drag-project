@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,8 +6,42 @@
     <title>Drag & Drop Project</title>
     <link rel="stylesheet" href="./dist/app.css" />
   </head>
-  <body>
-    <h1>Hello</h1>
+  <body class="min-w-full bg-slate-900 px-5 py-10 text-gray-300">
+    <form id="project-input" class="m-auto border-2 p-8 md:max-w-xl">
+      <div class="form-control">
+        <label for="title">Title</label>
+        <input type="text" id="title" />
+      </div>
+      <div class="form-control">
+        <label for="description">Description</label>
+        <textarea id="description" rows="3"></textarea>
+      </div>
+      <div class="form-control">
+        <label for="people">People</label>
+        <input
+          type="number"
+          id="people"
+          step="1"
+          min="0"
+          max="10"
+          class="w-14"
+        />
+      </div>
+      <button
+        type="submit"
+        class="mt-6 rounded-md bg-green-300 p-2 text-gray-800"
+      >
+        ADD PROJECT
+      </button>
+    </form>
+    <div id="project-list">
+      <section class="projects">
+        <header>
+          <h2></h2>
+        </header>
+        <ul></ul>
+      </section>
+    </div>
     <script src="./dist/app.js" defer></script>
   </body>
 </html>
